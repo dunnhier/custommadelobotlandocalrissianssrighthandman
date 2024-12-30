@@ -276,7 +276,7 @@ footer {padding-bottom:5px}
 .teammommy::before{background:url('./Images/mommy.png');}
 .teamonoeesan::before{background:url('./Images/onoeesan.png');}
 .teampengin::before{background:url('./Images/pengin.png');}
-.chat-msg-_North .username:not([class*="team"])::before {
+.chat-msg-Dunnhier .username:not([class*="team"])::before {
 background:url('./Images/kagami.ico');
 }
 .chat-msg-ShizuruAnon .username::before {
