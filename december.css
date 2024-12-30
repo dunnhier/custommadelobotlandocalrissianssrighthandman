@@ -276,10 +276,10 @@ footer {padding-bottom:5px}
 .teammommy::before{background:url('./Images/mommy.png');}
 .teamonoeesan::before{background:url('./Images/onoeesan.png');}
 .teampengin::before{background:url('./Images/pengin.png');}
-.chat-msg-Dunnhier .username:not([class*="team"])::before {
+.chat-msg-Dunnhier2 .username:not([class*="team"])::before {
 background:url('./Images/kagami.ico');
 }
-.chat-msg-ShizuruAnon .username::before {
+.chat-msg-Dunnhier .username::before {
 background:url('./Images/shiz_icon.png');
 }
 .chat-msg-tsukarin .username::before, .chat-msg-tsukat .username::before {
