@@ -258,7 +258,7 @@ footer {padding-bottom:5px}
 }
 
 /*Reddit flair*/
-.username::before{background:url('./Images/tiger.png');}
+.username::before{background:url('./Images/phoenix.png');}
 .teamtaiga::before{background:url('./Images/taiga.png');}
 .teamami::before{background:url('./Images/ami.png');}
 .teamminori::before{background:url('./Images/minori.png');}
