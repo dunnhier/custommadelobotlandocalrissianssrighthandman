@@ -259,7 +259,7 @@ footer {padding-bottom:5px}
 
 /*Reddit flair*/
 .username::before{background:url('./Images/phoenix.png');}
-.teamtaiga::before{background:url('./Images/taiga.png');}
+.teamedgeworth::before{background:url('./Images/edgeworth.png');}
 .teamami::before{background:url('./Images/ami.png');}
 .teamminori::before{background:url('./Images/minori.png');}
 .teaminko::before{background:url('./Images/inko.png');}
