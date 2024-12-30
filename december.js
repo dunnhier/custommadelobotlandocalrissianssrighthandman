@@ -2168,47 +2168,6 @@ if (Math.abs(timeDiff) < 1000) {
     Seconds = 59 - second;
   }
 
-  function AutismParty() {
-    if (isToradora === false && Hour === 23 && Month === 0 && Day >= 6) {
-      isToradora = true;
-    }
-    if (isToradora === true && Hour !== 23) {
-      isToradora = false;
-    }
-  }
-
-  function make() { //checks the numbers then applies
-    if (Month < 10) Month = '0' + Month;
-    if (Day < 10) Day = '0' + Day;
-    if (Hour < 10) Hour = '0' + Hour;
-    if (Minute < 10) Minute = '0' + Minute;
-    if (Seconds < 10) Seconds = '0' + Seconds;//these lines add a 0 if it's less than 10
-
-    //check if time is reasonable. if not gtfo
-    if (Hour > 23 || Minute > 59) {
-      console.error('Countdown error: time is incorrect ' + Hour + ' : ' + Minute + ' : ' + Seconds);
-    } else if (isToradora) {
-      $('#countdown').html("It's Time!!!");
-    } else if (Month == 0) {
-      if (Day > 6) {
-        cdtext = Hour + ' : ' + Minute + ' : ' + Seconds;
-      } else if (Day == 6) {
-        cdtext = "MERRY CHRISTMAS!";
-      } else {
-        cdtext = 11 + ' : ' + Day + ' : ' + Hour + ' : ' + Minute + ' : ' + Seconds;
-      }
-      document.getElementById("countdown").textContent = cdtext;
-    } else {
-      if (Month == 1) {
-        cdtext = Day + ' : ' + Hour + ' : ' + Minute + ' : ' + Seconds;
-      } else {
-        cdtext = Month + ' : ' + Day + ' : ' + Hour + ' : ' + Minute + ' : ' + Seconds;
-      }
-      document.getElementById("countdown").textContent = cdtext;
-    }
-  }
-}
-updateMOTDCountdown();
 
 var prevLength = 0;
 var MOTD = "";
