@@ -16,7 +16,7 @@ var adPercent = 0.1;
 
 var Favicon_URL = `${SCRIPT_FOLDER_URL}/Images/tiger.png`;
 
-var ChannelName_Caption = '25 Days of Autism';
+var ChannelName_Caption = 'Sneed';
 
 var TitleBarDescription_Caption = '>Streaming:';
 
