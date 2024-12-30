@@ -1563,12 +1563,12 @@ currenttimebtn = $('<button id="findtime" class="btn btn-xs btn-default" title="
     }
   });
 
-$('<span id="maxusers" title="Maximum Spectators">' + MAXUSERS + ' max spectators</span>')
+$('<span id="maxusers" title="Maximum Autists">' + MAXUSERS + ' max autists</span>')
   .appendTo("#chatheader")
 
 Callbacks.usercount = function (count) {
   CHANNEL.usercount = count;
-  var text = count + " spectator";
+  var text = count + " autist";
   if (count != 1) {
     text += "s";
   }
@@ -1576,7 +1576,7 @@ Callbacks.usercount = function (count) {
 
   if (MAXUSERS < count) {
     MAXUSERS = count;
-    $("#maxusers").text(MAXUSERS + " max spectators");
+    $("#maxusers").text(MAXUSERS + " max autists");
     setOpt(CHANNEL.name + "_MAXUSERS" + (new Date().getFullYear()), MAXUSERS);
   }
 };
@@ -2146,6 +2146,20 @@ if (Math.abs(timeDiff) < 1000) {
   timeDiff = 0;
 }
 
+function countdown(element) {
+  //set up
+  var Month = 0, Day = 0, Hour = 0, Minute = 0, Seconds = 0, isToradora = false;
+  element.append('<h3 id="countdowntitle" align="center">Time until Stream</h3>');
+  element.append('<h1 id="countdown" align="center">' + Month + ' : ' + Day + ' : ' + Hour + ' : ' + Minute + ' : ' + Seconds + '</h1>');
+
+  setInterval(function () { //updates every second
+    time();
+    AutismParty();
+    make();
+  }, 1000);
+
+  function daysInMonth(month, year) {
+    return new Date(year, month, 0).getDate();
   }
 
   function time() { //does the time work
@@ -2168,6 +2182,47 @@ if (Math.abs(timeDiff) < 1000) {
     Seconds = 59 - second;
   }
 
+  function AutismParty() {
+    if (isToradora === false && Hour === 23 && Month === 0 && Day >= 6) {
+      isToradora = true;
+    }
+    if (isToradora === true && Hour !== 23) {
+      isToradora = false;
+    }
+  }
+
+  function make() { //checks the numbers then applies
+    if (Month < 10) Month = '0' + Month;
+    if (Day < 10) Day = '0' + Day;
+    if (Hour < 10) Hour = '0' + Hour;
+    if (Minute < 10) Minute = '0' + Minute;
+    if (Seconds < 10) Seconds = '0' + Seconds;//these lines add a 0 if it's less than 10
+
+    //check if time is reasonable. if not gtfo
+    if (Hour > 23 || Minute > 59) {
+      console.error('Countdown error: time is incorrect ' + Hour + ' : ' + Minute + ' : ' + Seconds);
+    } else if (isToradora) {
+      $('#countdown').html("It's Time!!!");
+    } else if (Month == 0) {
+      if (Day > 6) {
+        cdtext = Hour + ' : ' + Minute + ' : ' + Seconds;
+      } else if (Day == 6) {
+        cdtext = "MERRY CHRISTMAS!";
+      } else {
+        cdtext = 11 + ' : ' + Day + ' : ' + Hour + ' : ' + Minute + ' : ' + Seconds;
+      }
+      document.getElementById("countdown").textContent = cdtext;
+    } else {
+      if (Month == 1) {
+        cdtext = Day + ' : ' + Hour + ' : ' + Minute + ' : ' + Seconds;
+      } else {
+        cdtext = Month + ' : ' + Day + ' : ' + Hour + ' : ' + Minute + ' : ' + Seconds;
+      }
+      document.getElementById("countdown").textContent = cdtext;
+    }
+  }
+}
+updateMOTDCountdown();
 
 var prevLength = 0;
 var MOTD = "";
