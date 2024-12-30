@@ -1563,12 +1563,12 @@ currenttimebtn = $('<button id="findtime" class="btn btn-xs btn-default" title="
     }
   });
 
-$('<span id="maxusers" title="Maximum Autists">' + MAXUSERS + ' max autists</span>')
+$('<span id="maxusers" title="Maximum Spectators">' + MAXUSERS + ' max spectators</span>')
   .appendTo("#chatheader")
 
 Callbacks.usercount = function (count) {
   CHANNEL.usercount = count;
-  var text = count + " autist";
+  var text = count + " spectator";
   if (count != 1) {
     text += "s";
   }
@@ -1576,7 +1576,7 @@ Callbacks.usercount = function (count) {
 
   if (MAXUSERS < count) {
     MAXUSERS = count;
-    $("#maxusers").text(MAXUSERS + " max autists");
+    $("#maxusers").text(MAXUSERS + " max spectators");
     setOpt(CHANNEL.name + "_MAXUSERS" + (new Date().getFullYear()), MAXUSERS);
   }
 };
