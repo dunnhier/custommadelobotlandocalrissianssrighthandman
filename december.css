@@ -279,8 +279,8 @@ footer {padding-bottom:5px}
 .chat-msg-Dunnhier .username:not([class*="team"])::before {
 background:url('./Images/kagami.ico');
 }
-.chat-msg-Dunnhier2 .username::before {
-background:url('./Images/shiz_icon.png');
+.chat-msg-DAMANWITHAmasterplan .username::before {
+background:url('./Images/franny.png');
 }
 .chat-msg-tsukarin .username::before, .chat-msg-tsukat .username::before {
 background:url('./Images/wafu_icon.png');
