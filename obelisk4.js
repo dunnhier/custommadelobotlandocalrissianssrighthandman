@@ -2596,7 +2596,7 @@ $("#chatline").keydown(function (ev) {
       } else {
         var t = msg.trim();
         if (TEAMCOLOR && t.indexOf("/") !== 0) {
-          t = t;
+          t = t + ' Ð' + TEAMCOLOR + 'Ð';
         }
         socket.emit("chatMsg", {
           msg: t,
