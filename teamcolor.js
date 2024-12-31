@@ -25,6 +25,6 @@ $('#teamcolor').change(function(){
 
 //Format messages upon page load because they're handled differently and I can't find the function
 $('.teamColorSpan').each(function(){
-	//var color = 'team' + $(this).text().replace(new RegExp('Ð','g'),'');
+	var color = 'team' + $(this).text().replace(new RegExp('Ð','g'),'');
 	$(this).parent().parent().find('.username').addClass(color);
 });
