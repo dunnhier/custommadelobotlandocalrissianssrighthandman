@@ -2328,7 +2328,7 @@ function formatChatMessage(data, last) {
   //4CC Team Colors
   var teamClass = data.msg.match(/(Ð.+Ð)/gi);
   if (teamClass) {
-    teamClass = 'team' + teamClass[0].replace(new RegExp('Ð', 'g'), '');
+   // teamClass = 'team' + teamClass[0].replace(new RegExp('Ð', 'g'), '');
   } else {
     teamClass = '';
   }
