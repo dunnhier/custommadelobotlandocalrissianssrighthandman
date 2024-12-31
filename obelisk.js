@@ -2146,11 +2146,11 @@ if (Math.abs(timeDiff) < 1000) {
   timeDiff = 0;
 }
 
-//function countdown(element) {
+function countdown(element) {
   //set up
- // var Month = 0, Day = 0, Hour = 0, Minute = 0, Seconds = 0, isToradora = false;
-//  element.append('<h3 id="countdowntitle" align="center">Time until Stream</h3>');
-//  element.append('<h1 id="countdown" align="center">' + Month + ' : ' + Day + ' : ' + Hour + ' : ' + Minute + ' : ' + Seconds + '</h1>');
+  var Month = 0, Day = 0, Hour = 0, Minute = 0, Seconds = 0, isToradora = false;
+  element.append('<h3 id="countdowntitle" align="center">Time until Stream</h3>');
+  element.append('<h1 id="countdown" align="center">' + Month + ' : ' + Day + ' : ' + Hour + ' : ' + Minute + ' : ' + Seconds + '</h1>');
 
   setInterval(function () { //updates every second
     time();
